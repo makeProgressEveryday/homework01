@@ -10,6 +10,9 @@
 
 @interface ViewController ()
 
+// 显示数据的label
+@property (nonatomic, weak) UILabel *label;
+
 @end
 
 @implementation ViewController
@@ -27,6 +30,16 @@
     [super viewDidLoad];
     
 }
+
+
+- (IBAction)btnClick:(id)sender {
+
+    
+    
+    
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
