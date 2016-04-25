@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UIPickerViewDelegate, UIPickerViewDataSource>
 
 // 显示数据的label
 @property (nonatomic, weak) IBOutlet UILabel *label;
@@ -21,6 +21,8 @@
 @property (nonatomic, strong) UIToolbar *toolbar;
 
 @property (nonatomic, strong) UITextField *txtField;
+
+@property (nonatomic, strong) NSArray *foodsArr;
 
 @end
 
@@ -63,7 +65,35 @@
 }
 
 
+#pragma mark - 数据源方法
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    
+    return self.foodsArr.count;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+
+    return [self.foodsArr[component] count];
+}
+
+#pragma mark - 代理方法
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    
+    return self.foodsArr[component][row];
+
+}
+
+
 #pragma mark - 懒加载
+
+- (NSArray *)foodsArr {
+
+    if (_foodsArr == nil) {
+        _foodsArr = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"01foods.plist" ofType:nil]];
+    }
+    return _foodsArr;
+}
+
 - (UITextField *)txtField {
 
     if (_txtField == nil) {
@@ -82,7 +112,9 @@
     if (_pickerView == nil) {
         _pickerView = [[UIPickerView alloc] init];
         
-        
+        // MARK: - 设置数据源代理对象
+        _pickerView.dataSource = self;
+        _pickerView.delegate = self;
     }
     return _pickerView;
     
