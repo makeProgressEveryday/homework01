@@ -60,7 +60,21 @@
 
 - (void)confirmItemClick {
     
-   
+    // 可变字符串
+    NSMutableString *tempStr = [NSMutableString string];
+    
+    // 遍历拼接3组数据
+    [self.foodsArr enumerateObjectsUsingBlock:^(NSArray * _Nonnull foods, NSUInteger idx, BOOL * _Nonnull stop) {
+       
+        NSInteger selectRow = [self.pickerView selectedRowInComponent:idx];
+        NSString *food = foods[selectRow];
+//        [tempStr appendString:food];
+        [tempStr appendFormat:@"%@ ", food];
+        
+        
+    }];
+    
+    self.label.text = tempStr;
     
 }
 
