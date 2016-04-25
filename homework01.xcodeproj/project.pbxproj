@@ -13,6 +13,7 @@
 		D99E5A231CCD3FCC00E143E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D99E5A211CCD3FCC00E143E9 /* Main.storyboard */; };
 		D99E5A251CCD3FCC00E143E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D99E5A241CCD3FCC00E143E9 /* Assets.xcassets */; };
 		D99E5A281CCD3FCC00E143E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D99E5A261CCD3FCC00E143E9 /* LaunchScreen.storyboard */; };
+		D99E5A301CCDB52D00E143E9 /* 01foods.plist in Resources */ = {isa = PBXBuildFile; fileRef = D99E5A2F1CCDB52D00E143E9 /* 01foods.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D99E5A241CCD3FCC00E143E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D99E5A271CCD3FCC00E143E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D99E5A291CCD3FCC00E143E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D99E5A2F1CCDB52D00E143E9 /* 01foods.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 01foods.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		D99E5A181CCD3FCC00E143E9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D99E5A2F1CCDB52D00E143E9 /* 01foods.plist */,
 				D99E5A191CCD3FCC00E143E9 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -139,6 +142,7 @@
 				D99E5A281CCD3FCC00E143E9 /* LaunchScreen.storyboard in Resources */,
 				D99E5A251CCD3FCC00E143E9 /* Assets.xcassets in Resources */,
 				D99E5A231CCD3FCC00E143E9 /* Main.storyboard in Resources */,
+				D99E5A301CCDB52D00E143E9 /* 01foods.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +304,7 @@
 				D99E5A2E1CCD3FCC00E143E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
